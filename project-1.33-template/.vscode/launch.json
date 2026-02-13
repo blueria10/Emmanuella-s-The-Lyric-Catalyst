@@ -1,0 +1,75 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open index.html",
+            "file": "c:\\Users\\Owner\\Downloads\\project-1.33-template\\project-1.33-template\\index.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open iteration1.html",
+            "file": "c:\\Users\\Owner\\Downloads\\project-1.33-template\\project-1.33-template\\iterations\\iteration1.html"
+        },
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open iteration2.html",
+            "file": "c:\\Users\\Owner\\Downloads\\project-1.33-template\\project-1.33-template\\iterations\\iteration2.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open iteration3.html",
+            "file": "c:\\Users\\Owner\\Downloads\\project-1.33-template\\project-1.33-template\\iterations\\iteration3.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open iteration4.html",
+            "file": "c:\\Users\\Owner\\Downloads\\project-1.33-template\\project-1.33-template\\iterations\\iteration4.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open iteration5.html",
+            "file": "c:\\Users\\Owner\\Downloads\\project-1.33-template\\project-1.33-template\\iterations\\iteration5.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open iteration6.html",
+            "file": "c:\\Users\\Owner\\Downloads\\project-1.33-template\\project-1.33-template\\iterations\\iteration6.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open iteration7.html",
+            "file": "c:\\Users\\Owner\\Downloads\\project-1.33-template\\project-1.33-template\\iterations\\iteration7.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open iteration8.html",
+            "file": "c:\\Users\\Owner\\Downloads\\project-1.33-template\\project-1.33-template\\iterations\\iteration8.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open iteration9.html",
+            "file": "c:\\Users\\Owner\\Downloads\\project-1.33-template\\project-1.33-template\\iterations\\iteration9.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open iteration10.html",
+            "file": "c:\\Users\\Owner\\Downloads\\project-1.33-template\\project-1.33-template\\iterations\\iteration10.html"
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metadata information--don't edit! -->
+	<meta charset="utf-8">
+	<meta content="initial-scale=1.0,width=device-width" name="viewport">
+	<meta name="lyricist" content="Bob Dylan">
+    <meta name="vocalist" content="Marcus Mumford">
+    <meta name="project-source" content="The New Basement Tapes">
+    <meta name="song-title" content="When I Get My Hands On You">
+    <meta name="description" content="An interactive lyric visualization of Bob Dylan's 'When I Get My Hands On You' featuring vocals by Marcus Mumford.">
+	<!-- Add your website title here -->
+	<title>Side to Side</title> 
+	
+	<!-- Googlefonts linking setup -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	
+	<!-- JQuery link setup--uncomment below to setup JQuery-->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	
+	<!-- JS document link setup--uncomment below to link your .js file -->
+	<!-- <script src="js/scripts.js"></script> -->
+
+	<style>
+		/* Your CSS styling FOR THIS PAGE here */
+		.line{
+			font-size: 20px;
+			font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			color: white;
+			display:inline-block;
+			white-space: pre-line;
+			animation: side-to-side 6s ease-in-out infinite alternate;
+		}
+		body {
+			background-color: rgb(0, 0, 0);
+			overflow: hidden;
+		}
+		.lyric_chase {
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+		}
+		@keyframes side-to-side {
+		from {
+			transform: translateX(0%);
+		}
+		to {
+			/* This moves it to the right.  */
+			transform: translateX(79vw); 
+		}
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	<button onclick="history.back()">Go Back</button>
+
+	<!-- Your HTML here -->
+	 <div class ="lyric_chase">
+		<p class="line">When I set my eyes on you<br>
+			Gonna keep you outta town at night<br>
+			When I set my eyes on you<br>
+			Not gonna be outta my sight<br>
+			And now you know<br>
+			Everywhere on Earth you go<br>
+			You’re gonna have me as your man<br>
+			When I get my hands on you<br>
+			Gonna make you carry me<br>
+			When I get my hands on you<br>
+			Gonna make you marry me<br>
+			And now you know<br>
+			Everywhere on Earth you go<br>
+			You’re gonna have me as your man
+		</p>
+	 </div>
+	
+</body>
+
+</html>

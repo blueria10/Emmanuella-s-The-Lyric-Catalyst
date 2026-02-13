@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metadata information--don't edit! -->
+	<meta charset="utf-8">
+	<meta content="initial-scale=1.0,width=device-width" name="viewport">
+	<meta name="lyricist" content="Bob Dylan">
+    <meta name="vocalist" content="Marcus Mumford">
+    <meta name="project-source" content="The New Basement Tapes">
+    <meta name="song-title" content="When I Get My Hands On You">
+    <meta name="description" content="An interactive lyric visualization of Bob Dylan's 'When I Get My Hands On You' featuring vocals by Marcus Mumford.">
+	<!-- Add your website title here -->
+	<title>Cloudy Day</title> 
+	
+	<!-- Googlefonts linking setup -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	
+	<!-- JQuery link setup--uncomment below to setup JQuery-->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	
+	<!-- JS document link setup--uncomment below to link your .js file -->
+	<!-- <script src="js/scripts.js"></script> -->
+
+	<style>
+		/* Your CSS styling FOR THIS PAGE here */
+
+		/*The cloud will change colors quickly as seen by the code below*/
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 70%;
+			height: 700px;
+		}
+		/* This is for cloud color changing if I want to do this for 1.66. 15 color changes = 15 keyframe stops */
+		
+		img{
+			animation: strongColorCycle 5s infinite;
+		}
+		@keyframes strongColorCycle {
+			0%   { filter: hue-rotate(0deg); }
+			6.66%  { filter: hue-rotate(24deg); }
+			13.33% { filter: hue-rotate(48deg); }
+			20%    { filter: hue-rotate(72deg); }
+			26.66% { filter: hue-rotate(96deg); }
+			33.33% { filter: hue-rotate(120deg); }
+			40%    { filter: hue-rotate(144deg); }
+			46.66% { filter: hue-rotate(168deg); }
+			53.33% { filter: hue-rotate(192deg); }
+			60%    { filter: hue-rotate(216deg); }
+			66.66% { filter: hue-rotate(240deg); }
+			73.33% { filter: hue-rotate(264deg); }
+			80%    { filter: hue-rotate(288deg); }
+			86.66% { filter: hue-rotate(312deg); }
+			93.33% { filter: hue-rotate(336deg); }
+			100%   { filter: hue-rotate(360deg); }
+		} 
+
+		body {
+			background-color: rgb(0, 0, 0);
+		}
+		.line {
+			position: absolute;
+			top: 50%;
+			left: 30%;
+			color: rgb(255, 255, 255);
+			font-size: 40px;
+			opacity: 0;
+			font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			animation: appear 4s forwards;
+		}
+		/* Define the animation */
+		@keyframes appear {
+			0% {
+				opacity: 0;
+				/* Added slidde up effect*/
+				transform: translateY(20px) scale(0.9); 
+			}
+			50% {
+				opacity: 1;
+			}
+			90% {
+				opacity: 0;
+			}
+		}
+	</style>
+	
+</head>
+
+<body>
+	<button onclick="history.back()">Go Back</button>
+
+	<!-- Your HTML here -->
+	<div class="cloud">
+		<img src="https://www.freepnglogos.com/uploads/cloud-png/white-cloud-image-transparent-6.png" alt="Transparent Cloud" width="300">
+		<div class="line" style="animation-delay:0.5s">When I set my eyes on you</div>
+
+		<div class="line" style="animation-delay: 2s;">Gonna keep you outta town at night </div>
+
+		<div class="line" style="animation-delay: 3.5s;">When I set my eyes on you </div>
+		<div class="line" style="animation-delay: 5.0s;">Not gonna be outta my sight </div>
+		<div class="line" style="animation-delay: 6.5s;">And now you know </div>
+		<div class="line" style="animation-delay: 8s;">Everywhere on Earth you go </div>
+
+		<div class="line" style="animation-delay: 9.5s;">You’re gonna have me as your man </div>
+
+		<div class="line" style="animation-delay: 11s;">When I get my hands on you </div>
+
+		<div class="line" style="animation-delay: 12.5s;">Gonna make you carry me </div>
+		<div class="line" style="animation-delay: 14s;">When I get my hands on you </div>
+		<div class="line" style="animation-delay: 15.5s;">Gonna make you marry me </div>
+		<div class="line" style="animation-delay: 17s;">And now you know </div>
+
+		<div class="line" style="animation-delay: 18.5s;">Everywhere on Earth you go </div>
+
+
+		<div class="line" style="animation-delay: 20s;">You’re gonna have me as your man </div>
+	 
+	</div>
+
+</body>
+
+</html>

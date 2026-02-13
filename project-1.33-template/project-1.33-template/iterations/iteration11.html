@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metadata information--don't edit! -->
+	<meta charset="utf-8">
+	<meta content="initial-scale=1.0,width=device-width" name="viewport">
+	<meta name="lyricist" content="Bob Dylan">
+    <meta name="vocalist" content="Marcus Mumford">
+    <meta name="project-source" content="The New Basement Tapes">
+    <meta name="song-title" content="When I Get My Hands On You">
+    <meta name="description" content="An interactive lyric visualization of Bob Dylan's 'When I Get My Hands On You' featuring vocals by Marcus Mumford.">
+	<!-- Add your website title here -->
+	<title>Eye</title> 
+
+	<!-- Googlefonts linking setup -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	<!-- JQuery link setup--uncomment below to setup JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+	
+	<!-- JS document link setup--uncomment below to link your .js file -->
+	<script src="C:\Users\Owner\Downloads\project-1.33-template\project-1.33-template\js\scripts.js"></script> 
+	
+
+	<style>
+		/* Your CSS styling FOR THIS PAGE here */
+
+		/*Place line in middle of screen*/
+		.line {
+			position: absolute;
+			top: 50%;
+			left: 35%;
+			color: rgb(156, 0, 0);
+			font-size: 2.5rem;
+			font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			pointer-events: none;
+		}
+		img{
+			width: 200px;
+			height: auto;
+		}
+		.eye{
+			animation: x 11s linear infinite alternate;
+			z-index: 5;
+			position: absolute;
+			width: 200px;
+			height: auto;
+		}
+
+		.drawing{
+			animation: y 5s linear infinite alternate;
+			cursor: pointer;
+			pointer-events: auto;
+		}
+
+		@keyframes x {
+			100%{ transform: translateX( calc(100vw - 200px));}
+		}
+		@keyframes y {
+			100%{ transform: translateY( calc(100vh - 200px));}
+
+		}
+		body{
+			overflow: hidden;
+		}
+
+		/*JS will shift the eye to random positions on the screen. Goal is to track and click eye*/
+	</style>
+	
+</head>
+
+<body>
+	<button onclick="history.back()">Go Back</button>
+
+	<!-- Your HTML here -->
+
+	<div class="eye">
+		<img class='drawing' src="https://marketplace.canva.com/o1ocY/MAG902o1ocY/1/tl/canva-simple-hand-drawn-eye-illustration-MAG902o1ocY.png" alt="Drawing of eye">
+	</div>
+	<div class="line">When I set my eyes on you</div>
+	
+</body>
+
+</html>

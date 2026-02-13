@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metadata information--don't edit! -->
+	<meta charset="utf-8">
+	<meta content="initial-scale=1.0,width=device-width" name="viewport">
+	<meta name="lyricist" content="Bob Dylan">
+    <meta name="vocalist" content="Marcus Mumford">
+    <meta name="project-source" content="The New Basement Tapes">
+    <meta name="song-title" content="When I Get My Hands On You">
+    <meta name="description" content="An interactive lyric visualization of Bob Dylan's 'When I Get My Hands On You' featuring vocals by Marcus Mumford.">
+	<!-- Add your website title here -->
+	<title>Slide Eye...</title> 
+	
+	<!-- Googlefonts linking setup -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	
+	<!-- JQuery link setup--uncomment below to setup JQuery-->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	
+	<!-- JS document link setup--uncomment below to link your .js file -->
+	<!-- <script src="js/scripts.js"></script> -->
+
+	<style>
+		/* Your CSS styling FOR THIS PAGE here */
+		/* Slide between lines */
+		body{
+			margin:0;
+			overflow: hidden;
+			background: black
+		}
+
+		.slider {
+			width: 100vw;
+			height: 100vh;
+			position: relative;
+			font-size: 30px;
+			color: white;
+			font-family:fantasy;
+		}
+		.sl{
+			position: absolute;
+			top: 30%;
+			white-space: normal;
+			opacity: 0; /* Hide it*/
+			max-width:300px;
+			line-height: 1.2;
+			
+		}
+		/* LEFT-START ANIMATION */
+		@keyframes slide-from-left {
+			0% { transform: translateX(-100%); opacity: 0; }
+			10% { opacity: 1; }
+			90% { opacity: 1; }
+			100% { transform: translateX(calc(100vw - 100%)); opacity: 0; }
+		}
+
+		/* RIGHT-START ANIMATION */
+		@keyframes slide-from-right {
+			0% { transform: translateX(100vw); opacity: 0; }
+			10% { opacity: 1; }
+			90% { opacity: 1; }
+			100% { transform: translateX(0); opacity: 0; }
+		}
+		.sl{
+			animation-duration: 12s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+
+		.sl.slide1 {
+			animation-name: slide-from-left;  animation-delay: 0s;
+		}
+		.sl.slide2 {
+			animation-name: slide-from-right;  animation-delay: 3s;
+		}
+		.sl.slide3 {
+			animation-name: slide-from-left;  animation-delay: 6s;
+		}
+		.sl.slide4 {
+			animation-name: slide-from-right;  animation-delay: 9s;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<button onclick="history.back()">Go Back</button>
+
+	<!-- Your HTML here -->
+	 <!--Slide between lines-->
+	 <div class="slider">
+		<div class="sl slide1">
+			When I set my eyes on you
+			Gonna keep you outta town at night
+			When I set my eyes on you
+			Not gonna be outta my sight
+
+		</div>
+		<div class="sl slide2">
+			And now you know
+			Everywhere on Earth you go
+			You’re gonna have me as your man
+
+		</div>
+		<div class="sl slide3">
+			When I get my hands on you
+			Gonna make you carry me
+			When I get my hands on you
+			Gonna make you marry me
+
+		</div>
+		<div class="sl slide4">
+			And now you know
+			Everywhere on Earth you go
+			You’re gonna have me as your man
+		</div>
+	 </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metadata information--don't edit! -->
+	<meta charset="utf-8">
+	<meta content="initial-scale=1.0,width=device-width" name="viewport">
+	<meta name="lyricist" content="Bob Dylan">
+    <meta name="vocalist" content="Marcus Mumford">
+    <meta name="project-source" content="The New Basement Tapes">
+    <meta name="song-title" content="When I Get My Hands On You">
+    <meta name="description" content="An interactive lyric visualization of Bob Dylan's 'When I Get My Hands On You' featuring vocals by Marcus Mumford.">
+	<!-- Add your website title here -->
+	<title>Floating Words</title> 
+
+	<!-- Googlefonts linking setup -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	
+	<!-- JQuery link setup--uncomment below to setup JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<!-- JS document link setup--uncomment below to link your .js file -->
+	<script src="C:\Users\Owner\Downloads\project-1.6-EDesruisseaux\project-1.33-template\project-1.33-template\js\scripts.js"></script> 
+
+	<style>
+		/* Your CSS styling FOR THIS PAGE here */
+		body {
+			margin: 0;
+			background: #ffffff;
+			height: 20vh;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.bubble_container {
+			
+			overflow-y: hidden;
+			height: 100vh;
+			width: 100vw;
+			position: relative;
+		}
+
+		/* Each bubble is a positioned wrapper */
+		.bubble {
+			position: relative;
+			width: 150px;      
+			height: 150px;
+		}
+
+		.bubbles > div {
+			position: absolute;
+			width: 150px;      
+			height: 150px;
+			transition: transform 0.1s linear; /* Smooths out the movement */
+		}
+
+		/* Bubble image */
+		.bubbles img {
+			width: 200px;
+			height: 200px;
+			object-fit: contain;
+			display: block;
+		}
+		/* Text centered inside bubble */
+		.bubble-text {
+			position: absolute;
+			inset: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			color: #000000;
+			font-weight: 600;
+			font-size: 1rem;
+			padding: 30px 100px; 
+			top: 50px;     /* so long text doesn’t touch edges */
+			font-family:'Courier New', Courier, monospace;
+			pointer-events: none;  /* clicks go through to image if needed */
+		}
+
+		/*Starting positions manually assigned*/
+		.bubble1 {
+			top: 10%;
+			left: 15%;
+		}
+
+		.bubble2 {
+			top: 40%;
+			left: 60%;
+		}
+
+		.bubble3 {
+			top: 70%;
+			left: 25%;
+		}
+		.bubble4 {
+			top: 20%;
+			left: 75%;
+		}
+		.bubble5 {
+			top: 50%;
+			left: 40%;
+		}
+		.bubble6 {
+			top: 80%;
+			left: 10%;
+		}
+		.bubble7 {
+			top: 30%;
+			left: 50%;
+		}
+		.bubble8 {
+			top: 60%;
+			left: 80%;
+		}
+		.bubble9 {
+			top: 15%;
+			left: 35%;
+		}
+		.bubble10 {
+			top: 45%;
+			left: 70%;
+		}
+		.bubble11 {
+			top: 75%;
+			left: 20%;
+		}
+		.bubble12 {
+			top: 25%;
+			left: 65%;
+		}
+		.bubble13 {
+			top: 55%;
+			left: 30%;
+		}
+		.bubble14 {
+			top: 85%;
+			left: 55%;
+		}
+		.bubble15 {
+			top: 35%;
+			left: 5%;
+		}
+		.bubble16 {
+			top: 65%;
+			left: 45%;
+		}
+		.bubble17 {
+			top: 5%;
+			left: 90%;
+		}
+		.bubble18 {
+			top: 90%;
+			left: 35%;
+		}
+
+
+
+
+
+	</style>
+	
+</head>
+
+<body>
+	<button onclick="history.back()">Go Back</button>
+
+	<!-- Your HTML here -->
+	 <div class="bubble_container">
+
+		<!--Create 18 bubbles-->
+		<div class="bubbles">
+			<div class="bubble1">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">When I set my eyes on you</span>
+			</div>
+			<div class="bubble2">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">Gonna keep you outta town at night</span>
+
+			</div>
+			<div class="bubble3">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">When I set my eyes on you</span>
+
+			</div>
+			<div class="bubble4">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">Not gonna be outta my sight</span>
+
+			</div>
+			<div class="bubble5">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">And now you know</span>
+
+			</div>
+			<div class="bubble6">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">Everywhere on Earth you go</span>
+
+			</div>
+			<div class="bubble7">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">You’re gonna have me as your man</span>
+
+			</div>
+			<div class="bubble8">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">When I get my hands on you</span>
+
+			</div>
+			<div class="bubble9">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">Gonna make you carry me</span>
+
+			</div>
+			<div class="bubble10">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">When I get my hands on you</span>
+
+			</div>
+			<div class="bubble11">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">Gonna make you marry me</span>
+
+			</div>
+			<div class="bubble12">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">And now you know</span>
+
+			</div>
+			<div class="bubble13">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">Everywhere on Earth you go</span>
+
+			</div>
+			<div class="bubble14">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				<span class="bubble-text">You’re gonna have me as your man</span>
+
+			</div>
+			<div class="bubble15">
+				<img src=https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png alt="bubble" />
+				
+
+			</div>
+			<div class="bubble16">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				
+
+			</div>
+			<div class="bubble17">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />
+				
+
+			</div>
+			<div class="bubble18">
+				<img src="https://files.ekmcdn.com/click4/images/clear-deco-bubble-balloon-20-1pc-12298-p.png" alt="bubble" />	
+				
+
+			</div>
+		</div>
+
+				
+</html>

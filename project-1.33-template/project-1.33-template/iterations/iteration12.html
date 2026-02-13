@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metadata information--don't edit! -->
+	<meta charset="utf-8">
+	<meta content="initial-scale=1.0,width=device-width" name="viewport">
+	<meta name="lyricist" content="Bob Dylan">
+    <meta name="vocalist" content="Marcus Mumford">
+    <meta name="project-source" content="The New Basement Tapes">
+    <meta name="song-title" content="When I Get My Hands On You">
+    <meta name="description" content="An interactive lyric visualization of Bob Dylan's 'When I Get My Hands On You' featuring vocals by Marcus Mumford.">
+	<!-- Add your website title here -->
+	<title>Parking Meter</title> 
+	
+	<!-- Googlefonts linking setup -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	
+	<!-- JQuery link setup--uncomment below to setup JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<!-- JS document link setup--uncomment below to link your .js file -->
+	<script src="C:\Users\Owner\Downloads\project-1.6-EDesruisseaux\project-1.33-template\project-1.33-template\js\scripts.js"></script>
+
+	<style>
+		/* Your CSS styling FOR THIS PAGE here */
+		.image-wrapper{
+			position: relative;      /* allows text to sit on top */
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+
+
+		}
+
+
+		img{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 80%;
+		}
+		/* Text lines */
+		.line {
+			position: absolute;
+			top: 22%;                /* same y-axis height */
+			transform: translateY(-50%);
+			color: rgb(255, 88, 46);
+			font-size: 17px;
+			font-weight: medium;
+			white-space: nowrap;
+			font-family: 'Silkscreen', cursive;
+			letter-spacing: -2px;
+			word-spacing: 5px;
+			text-shadow: 0 0 10px rgb(255, 178, 71); /* helps visibility */
+			cursor: pointer;
+			transition: transform 0.2s; /* smooth hover effect */
+			animation-name: bounce;
+			animation-duration: 1s;
+			animation-timing-function: ease-in-out; /* Smooth start and end */
+			animation-iteration-count: infinite; /* Loop the animation forever */
+		}
+		/* Define the animation */
+		@keyframes bounce {
+			0%, 100% {
+				transform: translateY(-50%) translateY(0);
+			}
+			50% {
+				transform: translateY(-50%) translateY(-10px);
+			}
+		}
+
+		.left{
+			left: 14% ;               /* left side */
+		}
+		.right{
+			right: 14% ;              /* right side */
+		}
+
+		body{
+			overflow: 	hidden;  /* prevents scroll bars */
+		}
+		.line:active {
+			transform: translateY(-50%) scale(.95); /* slightly enlarge on click */
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	<button onclick="history.back()">Go Back</button>
+
+	<!-- Your HTML here -->
+	<div class="image-wrapper">
+	 <img src="https://64.media.tumblr.com/50cbc1542907bfe54b5ab989e134c752/d524011d2410897a-aa/s640x960/070bd7e1c991186d315f0155c339f65efca33077.pnj" alt="Parking Meter">
+	 <div class="line left">Click me!</div>
+	 <div class="line right">Click me!</div>
+	</div>
+</body>
+
+</html>

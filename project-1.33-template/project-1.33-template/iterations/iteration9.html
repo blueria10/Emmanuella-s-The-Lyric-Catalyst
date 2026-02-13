@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metadata information--don't edit! -->
+	<meta charset="utf-8">
+	<meta content="initial-scale=1.0,width=device-width" name="viewport">
+	<meta name="lyricist" content="Bob Dylan">
+    <meta name="vocalist" content="Marcus Mumford">
+    <meta name="project-source" content="The New Basement Tapes">
+    <meta name="song-title" content="When I Get My Hands On You">
+    <meta name="description" content="An interactive lyric visualization of Bob Dylan's 'When I Get My Hands On You' featuring vocals by Marcus Mumford.">
+	<!-- Add your website title here -->
+	<title>And now you know...</title> 
+	
+	<!-- Googlefonts linking setup -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	
+	<!-- JQuery link setup--uncomment below to setup JQuery-->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	
+	<!-- JS document link setup--uncomment below to link your .js file -->
+	<!-- <script src="js/scripts.js"></script> -->
+
+	<style>
+		/* Your CSS styling FOR THIS PAGE here */
+		.line {
+			color: rgb(0, 0, 0);
+			font-size: 2rem;
+			font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		}
+		body{
+			margin-top: 50px;
+			margin-left: 50px;
+			line-height: 40px;
+		}
+
+		/*With js, when a line is clicked, its replaced by a diff one*/
+
+		.line:hover{
+			color: transparent
+		}
+		.line:hover::after{
+			content: attr(data-replace); /*replaces with the other line*/
+			color: rgb(0, 0, 0);
+			position: absolute;
+			left: 50px;
+			background-color: white;
+			text-shadow: 1px 1px 2px rgb(72, 72, 72);
+		}
+
+	</style>
+	
+</head>
+
+<body>
+	<button onclick="history.back()">Go Back</button>
+
+	<!-- Your HTML here -->
+	<div class="change_line">
+		<div class="line" data-replace="And now you know">When I set my eyes on you</div>
+		<div class="line" data-replace="Everywhere on Earth you go">Gonna keep you out of town at night</div>
+		<div class="line" data-replace="You're gonna have me as your man">When I set my eyes on you</div>
+		<div class="line" data-replace="And now you know">Not gonna be outta my sight</div>
+
+		<div class="line" data-replace="And now you know">And now you know</div>
+		<div class="line" data-replace="Everywhere on Earth you go">Everywhere on Earth you go</div>
+		<div class="line" data-replace="You're gonna have me as your man">You’re gonna have me as your man</div>
+
+		<div class="line" data-replace="Everywhere on Earth you go">When I get my hands on you</div>
+		<div class="line" data-replace="You're gonna have me as your man">Gonna make you carry me</div>
+		<div class="line" data-replace="And now you know">When I get my hands on you</div>
+		<div class="line" data-replace="Everywhere on Earth you go">Gonna make you marry me</div>
+
+		<div class="line"data-replace="You're gonna have me as your man">And now you know</div>
+		<div class="line"data-replace="You're gonna have me as your man">Everywhere on Earth you go</div>
+		<div class="line"data-replace="You're gonna have me as your man">You’re gonna have me as your man</div>
+
+</body>
+
+</html>

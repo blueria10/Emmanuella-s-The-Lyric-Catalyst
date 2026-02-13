@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metadata information--don't edit! -->
+	<meta charset="utf-8">
+	<meta content="initial-scale=1.0,width=device-width" name="viewport">
+	<meta name="lyricist" content="Bob Dylan">
+    <meta name="vocalist" content="Marcus Mumford">
+    <meta name="project-source" content="The New Basement Tapes">
+    <meta name="song-title" content="When I Get My Hands On You">
+    <meta name="description" content="An interactive lyric visualization of Bob Dylan's 'When I Get My Hands On You' featuring vocals by Marcus Mumford.">
+	<!-- Add your website title here -->
+	<title>Cloning</title> 
+
+	<!-- Googlefonts linking setup -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	
+	<!-- JQuery link setup--uncomment below to setup JQuery-->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	
+	<!-- JS document link setup--uncomment below to link your .js file -->
+	<!-- <script src="js/scripts.js"></script> -->
+
+	<style>
+		/* Your CSS styling FOR THIS PAGE here */
+	
+		.copyline{
+			position: relative;
+			font-size: 20px;
+			font-family: 'Silkscreen', cursive; width: 60%;
+			margin: auto;
+			display:inline-block;
+			padding-left: 20%;
+			padding-top: 10%;
+			color: rgb(0, 0, 0);
+			width: 600px;
+		}
+		.line{
+			white-space: pre-line;
+		}
+		
+		.dupe {
+			position: absolute;
+			top: 80px;
+			left: 500px;
+			white-space: pre-line;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			z-index: -1;
+			pointer-events: none;
+			/* Adjust timing */
+			animation: duplicate-outward 3s ease-in-out infinite;
+		}
+
+		.dupe.d1{
+			animation: bloom-1 8s ease-in-out infinite;
+		}
+		.dupe.d2{
+			animation: bloom-2 6s ease-in-out infinite;
+			animation-delay: 1s;
+		}
+		.dupe.d3{
+			animation: bloom-3 5s ease-in-out infinite;
+			animation-delay: 2s;
+		}
+		
+
+		@keyframes bloom-1 {
+			0%, 100% { transform: translate(0, 0) scale(1); opacity: 0; }
+			50% { transform: translate(15px, -15px) scale(1.02); opacity: 0.6; }
+		}
+
+		@keyframes bloom-2 {
+			0%, 100% { transform: translate(0, 0) scale(1); opacity: 0; }
+			50% { transform: translate(60px, -30px) scale(1.04); opacity: 0.3; }
+		}
+		@keyframes bloom-3 {
+			0%, 100% { transform: translate(0, 0) scale(1); opacity: 0; }
+			50% { transform: translate(100px, -45px) scale(1.06); opacity: 0.1; }
+		}
+
+	</style>
+	
+</head>
+
+<body>
+	<button onclick="history.back()">Go Back</button>
+
+	<!-- Your HTML here -->
+	 <div class="copyline">
+
+		<div class="line">When I set my eyes on you<br>
+			Gonna keep you outta town at night<br>
+			When I set my eyes on you<br>
+			Not gonna be outta my sight<br>
+			And now you know<br>
+			Everywhere on Earth you go<br>
+			You’re gonna have me as your man<br>
+			When I get my hands on you<br>
+			Gonna make you carry me<br>
+			When I get my hands on you<br>
+			Gonna make you marry me<br>
+			And now you know<br>
+			Everywhere on Earth you go<br>
+			You’re gonna have me as your man
+		</div>
+		<div class="dupe d1">When I set my eyes on you<br>
+			Gonna keep you outta town at night<br>
+			When I set my eyes on you<br>
+			Not gonna be outta my sight<br>
+			And now you know<br>
+			Everywhere on Earth you go<br>
+			You’re gonna have me as your man<br>
+			When I get my hands on you<br>
+			Gonna make you carry me<br>
+			When I get my hands on you<br>
+			Gonna make you marry me<br>
+			And now you know<br>
+			Everywhere on Earth you go<br>
+			You’re gonna have me as your man
+		</div>
+		<div class="dupe d2">When I set my eyes on you<br>
+			Gonna keep you outta town at night<br>
+			When I set my eyes on you<br>
+			Not gonna be outta my sight<br>
+			And now you know<br>
+			Everywhere on Earth you go<br>
+			You’re gonna have me as your man<br>
+			When I get my hands on you<br>
+			Gonna make you carry me<br>
+			When I get my hands on you<br>
+			Gonna make you marry me<br>
+			And now you know<br>
+			Everywhere on Earth you go<br>
+			You’re gonna have me as your man
+		</div>
+		<div class="dupe d3">When I set my eyes on you<br>
+			Gonna keep you outta town at night<br>
+			When I set my eyes on you<br>
+			Not gonna be outta my sight<br>
+			And now you know<br>
+			Everywhere on Earth you go<br>
+			You’re gonna have me as your man<br>
+			When I get my hands on you<br>
+			Gonna make you carry me<br>
+			When I get my hands on you<br>
+			Gonna make you marry me<br>
+			And now you know<br>
+			Everywhere on Earth you go<br>
+			You’re gonna have me as your man
+		</div>
+	 </div>
+	
+</body>
+
+</html>
