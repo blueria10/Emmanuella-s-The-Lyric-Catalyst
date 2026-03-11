@@ -36,16 +36,19 @@
 		}
 		.eye{
 			animation: x 11s linear infinite alternate;
-			z-index: 5;
+			z-index: 9999;
 			position: absolute;
 			width: 200px;
 			height: auto;
+			pointer-events: auto;
 		}
 
 		.drawing{
+			z-index: 9999;
 			animation: y 5s linear infinite alternate;
-			cursor: pointer;
 			pointer-events: auto;
+			cursor: pointer;
+
 		}
 
 		@keyframes x {
