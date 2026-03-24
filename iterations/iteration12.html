@@ -84,13 +84,40 @@
 		.line:active {
 			transform: translateY(-50%) scale(.95); /* slightly enlarge on click */
 		}
+		.back-link {
+			position: fixed;
+			bottom: 30px;
+			left: 30px;
+			background: none;
+			border: none;
+			font-family: 'Silkscreen', cursive; /* Using your pixel font */
+			font-size: 1rem;
+			color: #707070;
+			cursor: pointer;
+			text-transform: lowercase;
+			letter-spacing: 1px;
+			z-index: 1000;
+		}
+
+		.back-link:hover {
+			text-decoration: line-through; /* A very 'indie' non-conformist hover state */
+			color: #ff3e3e;
+		}
+
+		.back-link::before {
+			content: "[ ";
+		}
+
+		.back-link::after {
+			content: " ]";
+		}
 		
 	</style>
 	
 </head>
 
 <body>
-	<button onclick="history.back()">Go Back</button>
+	<button class="back-link" onclick="history.back()">Go Back</button>
 
 	<!-- Your HTML here -->
 	<div class="image-wrapper">

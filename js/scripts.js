@@ -51,7 +51,6 @@ $(document).ready(function(){
 //when the image gets clicked, then the line will change to the next line (for iteration 4)
 $(document).ready(function(){
      // 14 lines
-     console.log("Script loaded and jQuery is ready!");
      const lines = [
         "When I set my eyes on you",
         "Gonna keep you outta town at night",

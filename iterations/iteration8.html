@@ -25,31 +25,79 @@
 
 	<style>
 		/* Your CSS styling FOR THIS PAGE here */
-		.line{
-			font-size: 20px;
-			font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-			color: white;
-			display:inline-block;
-			white-space: pre-line;
-			animation: side-to-side 6s ease-in-out infinite alternate;
-		}
 		body {
-			background-color: rgb(0, 0, 0);
-			overflow: hidden;
-		}
+        background-color: #0a0a0a;
+        overflow: hidden;
+        /* A faint grain texture makes black backgrounds look more "indie" */
+        background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    	}
+
 		.lyric_chase {
 			width: 100vw;
 			height: 100vh;
-			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			padding-left: 5vw;
 		}
+
+		.line {
+			font-size: 1.8rem;
+			font-family: 'Courier New', Courier, monospace; /* Messy typewriter vibe */
+			font-weight: bold;
+			color: #efefef;
+			white-space: nowrap;
+			margin: 2px 0;
+			text-transform: lowercase;
+			/* The animation */
+			animation: side-to-side 8s ease-in-out infinite alternate;
+			opacity: 0.8;
+		}
+
+		/* Randomize the "chase" by staggering the lines */
+		.line:nth-child(even) {
+			animation-duration: 7s;
+			animation-delay: 0.5s;
+			color: #ff3e3e; /* Pops of that indie red */
+		}
+
+		.line:nth-child(3n) {
+			animation-duration: 9s;
+			animation-delay: -1s;
+			opacity: 0.4;
+		}
+
 		@keyframes side-to-side {
-		from {
-			transform: translateX(0%);
+			0% { transform: translateX(0); }
+			100% { transform: translateX(50vw); }
 		}
-		to {
-			/* This moves it to the right.  */
-			transform: translateX(79vw); 
+		.back-link {
+			position: fixed;
+			bottom: 30px;
+			left: 30px;
+			background: none;
+			border: none;
+			font-family: 'Silkscreen', cursive; /* Using your pixel font */
+			font-size: 1rem;
+			color: #707070;
+			cursor: pointer;
+			text-transform: lowercase;
+			letter-spacing: 1px;
+			z-index: 1000;
 		}
+
+		.back-link:hover {
+			text-decoration: line-through; /* A very 'indie' non-conformist hover state */
+			color: #ff3e3e;
+		}
+
+		.back-link::before {
+			content: "[ ";
+		}
+
+		.back-link::after {
+			content: " ]";
 		}
 		
 	</style>
@@ -57,7 +105,7 @@
 </head>
 
 <body>
-	<button onclick="history.back()">Go Back</button>
+	<button class="back-link" onclick="history.back()">Go Back</button>
 
 	<!-- Your HTML here -->
 	 <div class ="lyric_chase">

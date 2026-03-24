@@ -29,51 +29,217 @@
 	<!-- Add favicon-->
 	<link rel="icon" type="image/x-icon" href="C:\Users\Owner\Downloads\project-1.6-EDesruisseaux\images\eyefavicon.ico">
 	<style>
-		/* Your CSS styling FOR THIS PAGE here */
-		footer {
-			position: fixed;
-			bottom: 10px;
-			width: 100%;
-			text-align: center;
-			font-family: 'Courier New', Courier, monospace; /* Match your bubble font */
-			font-size: 0.8rem;
-			color: #666;
-			pointer-events: none; /* So it doesn't block bubble clicks */
-			z-index: 100;
-		}
-		body{
-			font-family: 'Courier New', Courier, monospace; /* Match your bubble font */
+    body {
+        /* A warm, recycled paper color */
+        background-color: #ffffff; 
+        background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png');
+        color: #2b2b2b;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-		}
-		/*If a link is visited, don't change color*/
-		a:visited {
-			color: inherit;
-		}
+    h1 {
+        font-family: 'Silkscreen', cursive;
+        font-size: 2.5rem;
+        background: rgb(156, 0, 0);
+        color: #e8e4d9;
+        padding: 5px 20px;
+        transform: rotate(-2deg);
+        box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+        margin-bottom: 50px;
+        text-transform: lowercase;
+    }
+
+    h2 {
+        font-style: italic;
+        font-weight: normal;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #333;
+    }
+
+    /* The "Tape" Menu */
+    ol {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 800px;
+        gap: 20px;
+    }
+
+    li {
+        transition: transform 0.3s ease;
+    }
+
+    /* Varying the rotation of each 'scrap' */
+    li:nth-child(odd) { transform: rotate(1.5deg); }
+    li:nth-child(even) { transform: rotate(-1.5deg); }
+
+    li a {
+        text-decoration: none;
+        color: #2b2b2b;
+        display: block;
+        padding: 15px 25px;
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 3px 3px 0px rgba(0,0,0,0.05);
+        font-weight: bold;
+        position: relative;
+    }
+
+    /* This adds a "Washi Tape" effect to the top of the links */
+    li a::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 20px;
+        background: rgb(156, 0, 0); /* Semi-transparent tape */
+        border-left: 2px dotted rgba(0,0,0,0.1);
+        border-right: 2px dotted rgba(0,0,0,0.1);
+    }
+
+    li a:hover {
+        background: #fdfdfd;
+        transform: scale(1.05) rotate(0deg);
+        box-shadow: 8px 8px 0px rgba(0,0,0,0.1);
+        z-index: 10;
+    }
+
+    footer {
+        margin-top: 60px;
+        padding: 20px;
+        border-top: 1px dashed #999;
+        text-align: center;
+        font-size: 0.9rem;
+        max-width: 500px;
+    }
+
+    footer strong {
+        text-decoration: underline;
+    }
+
+	/*Music player styling */
+	.music-player {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		background: #fff;
+		border: 2px solid #333;
+		padding: 10px;
+		transform: rotate(2deg); /* Keeps the scrapbook look */
+		box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+		font-family: 'Courier New', monospace;
+		z-index: 2000;
+	}
+
+	.music-player p {
+		margin: 0 0 5px 0;
+		font-size: 0.7rem;
+		text-transform: uppercase;
+		border-bottom: 1px solid #eee;
+	}
+
+	#play-btn {
+		background: #333;
+		color: #fff;
+		border: none;
+		font-family: 'Silkscreen', cursive;
+		font-size: 0.6rem;
+		padding: 5px 10px;
+		cursor: pointer;
+	}
+
+	#play-btn:hover {
+		background: rgb(156, 0, 0);
+	}
+	@keyframes tapeSwing {
+		0%   { transform: rotate(1deg)   translateY(0px); }
+		33%  { transform: rotate(-2deg)  translateY(-1px); }
+		66%  { transform: rotate(2.5deg) translateY(1px); }
+		100% { transform: rotate(1deg)   translateY(0px); }
+	}
+
+	.dancing {
+		animation: tapeSwing 0.8s infinite ease-in-out;
+		transform-origin: top center; /* This is the "Tape" anchor point */
+		display: inline-block; /* Ensures the transform works correctly */
+		z-index: 10;
+	}
+
+	/* Make each scrap of paper move slightly differently */
+	li:nth-child(even) .dancing {
+		animation-duration: 1.1s;
+		animation-delay: 0.2s;
+	}
+
+	li:nth-child(3n) .dancing {
+		animation-duration: 0.9s;
+		animation-delay: -0.1s;
+	}
 	</style>
-</head>
+	<body>
 
-<body>
+		<h1>the lyric catalyst</h1>
 
-	<!-- Your HTML here -->
-	<h1>Emmanuella's: The Lyric Catalyst</h1>
+		<h2>choose an iteration:</h2>
 
-	<h2>What's your choice?</h2>
-	<ol>
-		<li><a href="iterations/iteration11.html">Eye</a></li>
-		<li><a href="iterations/iteration1.html">Popping In</a></li>
-		<li><a href="iterations/iteration7.html">Redacted</a></li>
-		<li><a href="iterations/iteration12.html">Parking Meter</a></li>
-		<li><a href="iterations/iteration3.html">Slide Eye...</a></li>
-		<li><a href="iterations/iteration5.html">Cloudy Day</a></li>
-		<li><a href="iterations/iteration6.html">Floating Words</a></li>
-		<li><a href="iterations/iteration8.html">Side to Side</a></li>
-		<li><a href="iterations/iteration9.html">And now you know...</a></li>
-		<li><a href="iterations/iteration10.html">Cloning</a></li>
-	</ol>
+		<ol>
+			<li><a href="iterations/iteration11.html">eye</a></li>
+			<li><a href="iterations/iteration1.html">popping in</a></li>
+			<li><a href="iterations/iteration7.html">redacted</a></li>
+			<li><a href="iterations/iteration12.html">parking meter</a></li>
+			<li><a href="iterations/iteration3.html">slide eye...</a></li>
+			<li><a href="iterations/iteration5.html">cloudy day</a></li>
+			<li><a href="iterations/iteration6.html">floating words</a></li>
+			<li><a href="iterations/iteration8.html">side to side</a></li>
+			<li><a href="iterations/iteration9.html">and now you know...</a></li>
+			<li><a href="iterations/iteration10.html">cloning</a></li>
+		</ol>
 
-	<footer>
-    	<p>“When I Get My Hands On You” — Lyrics by <strong>Bob Dylan</strong> | Vocals by <strong>Marcus Mumford</strong></p>
-	</footer>
-</body>
+		<footer>
+			<p>“When I Get My Hands On You”<br> 
+			Lyrics: <strong>Bob Dylan</strong> / Vocals: <strong>Marcus Mumford</strong></p>
+		</footer>
+
+		<div class="music-player">
+			<p>Now Playing: Track 01</p>
+			<button onclick="toggleDance()" id="play-btn">Play Tape</button>
+		</div>
+		
+	
+		<script>
+			
+			function toggleDance() {
+				const btn = document.getElementById('play-btn');
+				// Select the links that have the tape styling
+				const stickyNotes = document.querySelectorAll('ol li a'); 
+
+				// Check if the first note is already dancing
+				const isDancing = stickyNotes[0].classList.contains('dancing');
+
+				if (!isDancing) {
+					// START the dance
+					stickyNotes.forEach(note => note.classList.add('dancing'));
+					btn.innerText = "Stop Tape";
+					console.log("Visual sequence initiated.");
+				} else {
+					// STOP the dance
+					stickyNotes.forEach(note => note.classList.remove('dancing'));
+					btn.innerText = "Play Tape";
+					console.log("Visual sequence paused.");
+				}
+			}
+		</script>
+		
+
+	</body>
 
 </html>
