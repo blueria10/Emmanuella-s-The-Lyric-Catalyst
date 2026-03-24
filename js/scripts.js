@@ -1,3 +1,4 @@
+alert("JS is connected!");
 //Fill in the array with the 14 lines of the song (for iteration 2)
 $(document).ready(function(){
 
